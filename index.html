@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cybersecurity and Data Protection in the Workplace</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eaf1f9;--ink:#0b2a4a;--muted:#5a6676;--card:#fff;--accent:#0b7fa8;--hero1:#0d2340;--hero2:#1d3e63;--ring:#1ea0ff;--shadow:0 6px 22px rgba(20,50,90,.12);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1724;--ink:#e6eefb;--muted:#9fb0c6;--card:#16243a;--accent:#4cc3ee;--shadow:0 6px 22px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#0e1724;--ink:#e6eefb;--muted:#9fb0c6;--card:#16243a;--accent:#4cc3ee;--shadow:0 6px 22px rgba(0,0,0,.4)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Roboto,Arial,sans-serif}
+.hero{background:linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;text-align:center;padding:56px 22px 64px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(120deg,rgba(255,255,255,.035) 0 2px,transparent 2px 46px)}
+.hero>*{position:relative}
+.hero h1{font-size:2rem;line-height:1.2;margin:0 0 16px;font-weight:700}
+.hero p{font-size:1.2rem;line-height:1.6;margin:0 auto 38px;max-width:30em;font-weight:400}
+.ring{width:224px;height:224px;margin:0 auto;border-radius:50%;border:8px solid var(--ring);display:grid;place-items:center;background:rgba(13,35,64,.55);box-shadow:0 0 28px rgba(30,160,255,.55),inset 0 0 22px rgba(30,160,255,.25);animation:pulse 3.2s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 44px rgba(30,160,255,.8),inset 0 0 28px rgba(30,160,255,.35)}}
+@media (prefers-reduced-motion:reduce){.ring{animation:none}}
+.topics{max-width:640px;margin:0 auto;padding:56px 24px 64px}
+.topics h2{text-align:center;font-size:2.2rem;margin:0 0 10px;font-weight:700}
+.sub{text-align:center;color:var(--muted);font-size:1.15rem;line-height:1.35;margin:0 auto 38px;max-width:20em}
+.card{display:block;width:100%;text-align:left;border:0;padding:0;margin:0 0 28px;background:var(--card);border-radius:22px;box-shadow:var(--shadow);overflow:hidden;cursor:pointer;font:inherit;color:inherit;transition:transform .15s}
+.card:active{transform:scale(.985)}
+.card:focus-visible{outline:3px solid var(--ring);outline-offset:3px}
+.card svg{display:block;width:100%;height:auto}
+.card .t{padding:24px 30px 30px}
+.card h3{margin:0 0 14px;font-size:1.6rem;color:var(--accent);font-weight:700}
+.card p{margin:0;font-size:1.2rem;line-height:1.5;color:var(--muted)}
+footer{background:#0d2340;color:#fff;text-align:center;padding:52px 22px 44px;font-size:1.3rem;position:relative;overflow:hidden;line-height:1.3}
+footer:before{content:"";position:absolute;left:-20%;right:-20%;top:-60px;height:90px;border-radius:50%;background:rgba(40,100,160,.35)}
+footer span{position:relative}
+.modal{position:fixed;inset:0;background:rgba(5,15,30,.65);display:none;align-items:flex-end;justify-content:center;z-index:10;padding:0}
+.modal.open{display:flex}
+.sheet{background:var(--card);width:100%;max-width:640px;border-radius:24px 24px 0 0;padding:28px 26px calc(28px + env(safe-area-inset-bottom,0px));max-height:85%;overflow:auto;animation:up .22s ease-out}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+.sheet h3{margin:0 0 18px;font-size:1.7rem;color:var(--accent)}
+.sheet h4{margin:18px 0 6px;font-size:1.05rem}
+.sheet p{margin:0;font-size:1.1rem;line-height:1.55;color:var(--muted)}
+.close{margin-top:24px;width:100%;padding:14px;border:0;border-radius:12px;background:var(--accent);color:#fff;font:700 1.05rem Roboto,Arial,sans-serif;cursor:pointer}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>Cybersecurity and Data Protection in the Workplace</h1>
+  <p>Learn how employees can protect company systems, devices, accounts, and confidential office information from cyber threats.</p>
+  <div class="ring" aria-hidden="true">
+    <svg width="96" height="110" viewBox="0 0 96 110"><path d="M48 4 8 20v32c0 26 18 45 40 54 22-9 40-28 40-54V20z" fill="#cfe3ee" stroke="#8fb4c8" stroke-width="3"/><path d="M48 4v102C26 97 8 78 8 52V20z" fill="#9dbdce"/><path d="M48 12 14 25v27c0 22 15 39 34 47z" fill="none" stroke="#e8f3f8" stroke-width="2" stroke-dasharray="2 5"/></svg>
+  </div>
+</header>
+
+<main class="topics">
+  <h2>Cybersecurity Topics</h2>
+  <p class="sub">Click each box to read its definition and workplace connection.</p>
+  <div id="list"></div>
+</main>
+
+<footer><span>© 2026 Cybersecurity and Data Protection in the Workplace</span></footer>
+
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+  <div class="sheet">
+    <h3 id="mt"></h3>
+    <h4>Definition</h4><p id="md"></p>
+    <h4>Workplace connection</h4><p id="mw"></p>
+    <button class="close" id="mc">Close</button>
+  </div>
+</div>
+
+<script>
+var W='<svg viewBox="0 0 520 240" preserveAspectRatio="xMidYMid slice">';
+var topics=[
+{t:"Password Security",s:"Use strong and unique passwords to protect workplace accounts.",
+ d:"A password is a secret used to prove who you are. A strong one is long, hard to guess, and never reused across accounts.",
+ w:"Weak or shared passwords are a common way attackers get into email, files, and company systems. Use a password manager, avoid sticky notes, and never share your login.",
+ i:W+'<rect width="520" height="240" fill="#0b1510"/><g fill="#1c2a22">'+Array.from({length:40},function(_,i){return '<rect x="'+(10+(i%10)*50)+'" y="'+(110+Math.floor(i/10)*32)+'" width="40" height="24" rx="4"/>'}).join('')+'</g><rect width="520" height="240" fill="#0f7a3a" opacity=".25"/><path d="M200 140V90a60 60 0 0 1 120 0v50" fill="none" stroke="#c9503a" stroke-width="16"/><rect x="170" y="130" width="180" height="100" rx="14" fill="#d9452f"/><circle cx="260" cy="170" r="12" fill="#6b1d12"/></svg>'},
+{t:"Phishing",s:"Identify fake emails, messages, and websites that steal information.",
+ d:"Phishing is a trick where an attacker pretends to be a trusted person or company to get you to share information or click a harmful link.",
+ w:"Fake invoices, delivery notices, and \"urgent\" requests from a boss target office staff every day. Check the sender, hover over links, and report anything suspicious instead of clicking.",
+ i:W+'<defs><linearGradient id="p" x1="0" x2="1"><stop offset="0" stop-color="#b8631a"/><stop offset=".5" stop-color="#2a2236"/><stop offset="1" stop-color="#1f6fd0"/></linearGradient></defs><rect width="520" height="240" fill="url(#p)"/><g font-family="monospace" font-size="15" fill="#9fd0ff" opacity=".8"><text x="60" y="110" transform="rotate(-14 60 110)">$comment_count, \'order\'</text><text x="120" y="150" transform="rotate(-14 120 150)">the_post()?&gt;</text><text x="150" y="196" transform="rotate(-14 150 196)">has_post_thumbnail col-xs-12</text></g></svg>'},
+{t:"Malware",s:"Understand harmful software and how it can affect office devices.",
+ d:"Malware is software built to damage a device, steal data, or lock files. Viruses, ransomware, and spyware are common types.",
+ w:"Malware usually arrives through unknown attachments, pirated software, or unsafe USB drives. It can spread across the office network, so install only approved programs and keep updates on.",
+ i:W+'<rect width="520" height="240" fill="#000"/><g fill="none" stroke="#e8e8e8" stroke-width="1.4" opacity=".85"><circle cx="150" cy="150" r="44"/><circle cx="200" cy="140" r="30"/><path d="M60 190l70-100 60 100zM260 60l80 50-30 70zM360 170l60-90 50 80zM30 60h80v40H30zM420 40h70v60h-70z"/><path d="M200 30c30 20 60 20 90 0M110 215h300"/></g><g fill="#ddd" font-family="serif" font-size="13"><text x="230" y="110">∂f/∂x = Σ aᵢxⁱ</text><text x="330" y="40">E = ½mv² + V(x)</text><text x="30" y="30">sin θ / cos θ</text></g></svg>'},
+{t:"Data Breaches",s:"Learn what happens when confidential data is accessed without permission.",
+ d:"A data breach happens when private or protected information is seen, copied, or stolen by someone who has no right to it.",
+ w:"A breach can expose customer records, staff details, and company plans. It leads to legal trouble and lost trust, so report any lost device or wrong recipient email right away.",
+ i:W+'<rect width="520" height="240" fill="#6c5a4a"/><rect x="0" y="0" width="520" height="90" fill="#4a3f38"/><rect x="160" y="40" width="200" height="130" rx="8" fill="#2a2e38"/><rect x="170" y="50" width="180" height="104" fill="#dfe6ef"/><rect x="180" y="62" width="60" height="8" fill="#9db0c8"/><rect x="180" y="80" width="150" height="6" fill="#b9c6d8"/><rect x="180" y="94" width="120" height="6" fill="#b9c6d8"/><rect x="330" y="110" width="80" height="150" rx="14" transform="rotate(14 370 180)" fill="#2d6bd6"/><ellipse cx="90" cy="200" rx="60" ry="22" fill="#e0a98a"/></svg>'},
+{t:"Two-Factor Authentication",s:"Add another layer of protection when signing in to an account.",
+ d:"Two-factor authentication (2FA) asks for a second proof of identity, such as a code from your phone, in addition to your password.",
+ w:"Even if a password is stolen, the attacker still needs your second factor. Turn on 2FA for work email, cloud storage, and any system that holds company data.",
+ i:W+'<rect width="520" height="240" fill="#46454d"/><rect x="40" y="20" width="150" height="190" rx="8" fill="#9aa2ad" transform="rotate(-8 115 115)"/><rect x="52" y="34" width="124" height="160" fill="#2b2f36" transform="rotate(-8 115 115)"/><path d="M220 90q70-30 130-10l60 10v50l-80 10q-70 0-110-20z" fill="#e3a98a"/><path d="M200 100l80-4" stroke="#e3a98a" stroke-width="22" stroke-linecap="round"/><rect x="340" y="86" width="48" height="26" rx="10" fill="#1a1c22"/><path d="M300 200q60-30 150 0v40H300z" fill="#d6a68a"/></svg>'},
+{t:"Confidential Information",s:"Handle private office files and personal information responsibly.",
+ d:"Confidential information is anything the company or its people expect to stay private, such as contracts, client details, and personal records.",
+ w:"Share it only with people who need it, lock screens when you step away, and store or dispose of papers and files the way company policy requires.",
+ i:W+'<rect width="520" height="240" fill="#7d8aa3"/><path d="M40 240l60-120 340-20 40 140z" fill="#f4f6f8"/><path d="M220 40l30 90" stroke="#16202e" stroke-width="7" stroke-linecap="round"/><path d="M150 70q60-40 120 0l40 70q-60 20-110 0z" fill="#e0a98a"/><path d="M0 0h520v60q-80 20-140 10L220 40z" fill="#5d6e8d" opacity=".55"/></svg>'},
+{t:"Safe Workplace Practices",s:"Apply daily habits that help keep the workplace secure.",
+ d:"Safe workplace practices are small, repeated habits that keep systems, devices, and information protected throughout the day.",
+ w:"Lock your computer, keep visitors supervised, update software, and speak up when something looks wrong. Consistent habits across the team stop most everyday incidents.",
+ i:W+'<rect width="520" height="240" fill="#b9b4ab"/><rect width="520" height="150" fill="#d8d5cf"/><g fill="none" stroke="#1a1d22" stroke-width="5"><path d="M30 0v170M110 0v150M190 0v135M270 20v110M330 30v100"/><path d="M0 60h330M0 110h330" stroke-width="3"/></g><rect x="20" y="150" width="500" height="90" fill="#a89f94"/><path d="M270 20h250v110H270z" fill="#8c735a"/><rect x="60" y="130" width="26" height="60" fill="#e8e1cf"/><rect x="40" y="110" width="76" height="30" rx="6" fill="#d9d4c4"/><circle cx="440" cy="40" r="8" fill="#111"/></svg>'}
+];
+var list=document.getElementById('list');
+topics.forEach(function(x,n){
+  var b=document.createElement('button');b.className='card';b.type='button';
+  b.innerHTML=x.i+'<div class="t"><h3>'+x.t+'</h3><p>'+x.s+'</p></div>';
+  b.onclick=function(){open(n)};list.appendChild(b);
+});
+var m=document.getElementById('modal'),last;
+function open(n){last=document.activeElement;var x=topics[n];
+  document.getElementById('mt').textContent=x.t;
+  document.getElementById('md').textContent=x.d;
+  document.getElementById('mw').textContent=x.w;
+  m.classList.add('open');document.getElementById('mc').focus();}
+function shut(){m.classList.remove('open');if(last)last.focus();}
+document.getElementById('mc').onclick=shut;
+m.onclick=function(e){if(e.target===m)shut()};
+document.addEventListener('keydown',function(e){if(e.key==='Escape')shut()});
+</script>
+</body>
+</html>
